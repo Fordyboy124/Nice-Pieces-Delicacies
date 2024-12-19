@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Menu</title>
+    <meta name="description" content="Explore the delicious menu at our Restaurant. We offer a variety of dishes to satisfy every taste.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="#">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro" rel="stylesheet">
+    <!-- Fonts -->
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- FontAwesome -->
+
+    <link rel="stylesheet" href="styles.css">
+
+     <style>
+        /* Menu Section Styling */
+.menu-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.menu-section .section {
+    margin-bottom: 50px;
+}
+
+.menu-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Style the unordered list in each section */
+.menu-section ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid with equal column widths */
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-section ul li {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-section ul li:hover {
+    transform: translateY(-10px);
+}
+
+/* Style for images */
+.menu-section ul li img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Style for the menu item description */
+.menu-item {
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .menu-section ul {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .menu-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .menu-item h3 {
+        font-size: 1rem;
+    }
+
+    .menu-item p {
+        font-size: 0.9rem;
+    }
+
+    .menu-item .price {
+        font-size: 1rem;
+    }
+}
+
+     </style>
+</head>
+
+<body class="stop-scroll">
+
+    <!-- Start loader -->
+    <div class="loader-wrap">
+        <div class="loader">
+            <span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span>
+        </div>
+    </div>
+    <!-- End loader -->
+
+    <!-- Start Dots -->
+    <div class="dots">
+        <div class="active one" data-x="header"></div>
+        <div class="two" data-x=".menu-section"></div>
+    </div>
+    <!-- End Dots -->
+
+    <!-- Start Header -->
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.jpg" alt="Logo"></a>
+            </div>
+            <div class="toggle">
+                <span class="first"></span>
+                <span class="middle"></span>
+                <span class="last"></span>
+            </div>
+            <div class="navigation-bar">
+                <ul>
+                    <li><a href="index.html">Home<span class="underline"></span></a></li>
+                    <li class="active"><a href="menu.html" class="active">Menu<span class="underline"></span></a></li>
+                    <li><a href="reservation.html">Reservation<span class="underline"></span></a></li>
+                    <li><a href="about.html">About<span class="underline"></span></a></li>
+                    <li><a href="contact.html">Contact<span class="underline"></span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text">
+            <h2>Our Delectable Menu</h2>
+            <h1>Menu</h1>
+            <div class="arrow">
+                <span class="left"></span>
+                <i class="fas fa-asterisk"></i>
+                <span class="right"></span>
+            </div>
+            <span>Explore our selection of delicious dishes</span>
+            <div class="button"><button>Order Now</button></div>
+        </div>
+        <svg class="svg-down" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="currentColor" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
+        <div class="arrow-down">
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Menu Section -->
+    <div class="menu-section">
+        <div class="section">
+            <h2>Appetizers</h2>
+            <ul>
+                <li>
+                    <img src="images/samosa_tea.jpg" alt="Bruschetta">
+                    <div class="menu-item">
+                        <h3>Samosa with Tea</h3>
+                        <p>Our samosas are packed with flavorful vegetables or tender meat, wrapped in a crispy, flaky pastry. Paired with our perfectly spiced, smooth tea, it’s the ideal combo for a satisfying treat.</p>
+                        <span class="price">$8.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/oo1.jpg" alt="Bruschetta">
+                    <div class="menu-item">
+                        <h3>Bruschetta</h3>
+                        <p>Fresh tomatoes, garlic, and basil on toasted bread</p>
+                        <span class="price">$8.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/oo2.jpg" alt="Garlic Bread">
+                    <div class="menu-item">
+                        <h3>Garlic Bread</h3>
+                        <p>Warm bread with a savory garlic butter spread</p>
+                        <span class="price">$6.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/oo3.jpg" alt="Stuffed Mushrooms">
+                    <div class="menu-item">
+                        <h3>Stuffed Mushrooms</h3>
+                        <p>Stuffed with cheese, garlic, and herbs</p>
+                        <span class="price">$10.00</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Main Courses</h2>
+            <ul>
+                <li>
+                    <img src="images/oo4.jpg" alt="Grilled Salmon">
+                    <div class="menu-item">
+                        <h3>Grilled Salmon</h3>
+                        <p>Fresh salmon grilled to perfection, served with seasonal vegetables</p>
+                        <span class="price">$20.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/oo5.jpg" alt="Beef Tenderloin">
+                    <div class="menu-item">
+                        <h3>Beef Tenderloin</h3>
+                        <p>Succulent beef tenderloin with a red wine reduction sauce</p>
+                        <span class="price">$25.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/oo6.jpg" alt="Chicken Alfredo">
+                    <div class="menu-item">
+                        <h3>Chicken Alfredo</h3>
+                        <p>Creamy Alfredo sauce over grilled chicken and pasta</p>
+                        <span class="price">$18.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/chips_chicken.jpg" alt="Chicken Alfredo">
+                    <div class="menu-item">
+                        <h3>Chips chicken</h3>
+                        <p>Serve the chicken and chips in a wrap or flatbread for a more modern take. You can add fresh greens, pickles, and a sauce like garlic aioli or chipotle mayo, making it easy for customers to enjoy this dish on the go.</p>
+                        <span class="price">$18.00</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Desserts</h2>
+            <ul>
+                <li>
+                    <img src="images/oo7.jpg" alt="Chocolate Lava Cake">
+                    <div class="menu-item">
+                        <h3>Chocolate Lava Cake</h3>
+                        <p>Whether enjoyed alone or with a scoop of ice cream, this dessert is the perfect way to end any meal on a sweet note. At Nice Pieces Delicacies, we craft each Lava Cake to perfection,
+                             ensuring a delightful and unforgettable treat with every bite!</p>
+                        <span class="price">$9.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/oo8.jpg" alt="Tiramisu">
+                    <div class="menu-item">
+                        <h3>Tiramisu</h3>
+                        <p>Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cream</p>
+                        <span class="price">$7.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/oo9.jpg" alt="Cheesecake">
+                    <div class="menu-item">
+                        <h3>Cheesecake</h3>
+                        <p>Rich and creamy cheesecake with a buttery graham cracker crust</p>
+                        <span class="price">$8.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/tasty_meat.jpg" alt="Cheesecake">
+                    <div class="menu-item">
+                        <h3>Fried Meat</h3>
+                        <p>Fried meat often evokes feelings of comfort and nostalgia, making it a go-to for casual dining or special occasions. It's a dish that brings people together, whether served in a home setting or at Nice Pieces</p>
+                        <span class="price">$8.00</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Drinks</h2>
+            <ul>
+                <li>
+                    <img src="images/o10.jpg" alt="Red Wine">
+                    <div class="menu-item">
+                        <h3>Red Wine</h3>
+                        <p>Full-bodied red wine to complement your meal</p>
+                        <span class="price">$12.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/o11.jpg" alt="Fizzy Drinks">
+                    <div class="menu-item">
+                        <h3>Fizzy Drinks</h3>
+                        <p>Refreshing and Fizzy Drinks</p>
+                        <span class="price">$10.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/o13.jpg" alt="Craft Beer">
+                    <div class="menu-item">
+                        <h3>Craft Beer</h3>
+                        <p>Locally brewed craft beer</p>
+                        <span class="price">$6.00</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/o14.jpg" alt="Fresh Lemonade">
+                    <div class="menu-item">
+                        <h3>Fresh Lemonade</h3>
+                        <p>Refreshing homemade lemonade</p>
+                        <span class="price">$5.00</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Menu Section -->
+
+    <!-- Start Footer -->
+    <footer>
+        <div class="text">
+            <h2>ABOUT NICE PICES DELICACIES</h2>
+            <div><i class="fas fa-asterisk"></i></div>
+            <p>We are an enchanting and easy-to-use parallax Restaurant WordPress theme that allows you to tell your story in a dynamic, narrative and enjoyable way, making it perfect for restaurants, bakeries, bars or coffee shops.</p>
+        </div>
+        <div class="contact-container">
+            <div class="social-media">
+                <h3>Follow Along</h3>
+                <div class="links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h3>NewsLetter</h3>
+                <form method="post">
+                    <input type="email" name="email" placeholder="Type Your Email">
+                    <i class="fas fa-envelope"></i>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Copy-Right -->
+    <div class="copyright">
+        <svg class="svg-up" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="#262526" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
+        <i class="fas fa-angle-double-up arrow-up"></i>
+        <ul class="info">
+            <li>© Nice Pieces Delicacies 2024</li>
+            <li>Fedha Road Embakasi, Kenya</li>
+            <li>Tel: +254700-000-000</li>
+            <li>Handcrafted with love by <a href="#">Danford</a> Team</li>
+        </ul>
+        <ul class="CTA">
+            <li><a href="#">PERMISSIONS AND COPYRIGHT</a></li>
+            <li><a href="contact.html">CONTACT THE TEAM</a></li>
+        </ul>
+    </div>
+    <!-- End Copy-Right -->
+
+    <!-- Add your site or application content here -->
+    <script src="script.js"></script>
+</body>
+
+</html>
